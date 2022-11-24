@@ -38,6 +38,14 @@ export default function Offboarding() {
           )}
         {user && user.role === 'ROLE_ASSOCIATE' && (
           <>
+            <li className={isTabActive('Off-boarding Checklist')}>
+              <Link to="/offBoardingCheckList">
+                <Button
+                  label="Off-boarding Checklist"
+                  clickHandler={() => tabClicked('Off-boarding Checklist')}
+                />
+              </Link>
+            </li>
             <li className={isTabActive('Sample Documents')}>
               <Link to="/sampleDocuments">
                 <Button
