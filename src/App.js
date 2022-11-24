@@ -12,6 +12,7 @@ import LoginComponent from "./components/auth/LoginComponent";
 import "./styles/app.css";
 import SampleDocuments from './components/document/SampleDocuments';
 import Offboarding from './views/Offboarding';
+import OffBoardingCheckList from './components/associate-useful/Off-BoardingCheckList/OffBoardingCheckList';
 
 function App() {
   const user = useSelector(userDetails);
@@ -24,6 +25,7 @@ function App() {
             <Route path="/" element={<Welcome />} />
             {user && (
               <>
+                <Route path="offBoardingCheckList" element={<OffBoardingCheckList />}/>
                 <Route path="uploadDocuments" element={<UploadDocument />} />
                 <Route path="sampleDocuments" element={<SampleDocuments />} />
                 <Route path="recording" element={<Recording />} />

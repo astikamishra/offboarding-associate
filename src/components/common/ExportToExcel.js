@@ -54,6 +54,7 @@ const ExportToExcel = ({ inputExcelData, excelData }) => {
           onClick={() => exportIntoExcel()}
           aria-hidden="true"
         ></i>
+        {/* <h1 type="buton" onClick={() => exportIntoExcel()}>Astik</h1> */}
       </div>
     </>
   );

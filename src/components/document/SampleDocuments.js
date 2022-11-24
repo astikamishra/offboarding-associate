@@ -44,7 +44,10 @@ const SampleDocuments = () => {
   }, []);
 
   const fetchDocuments = () => {
-    setDocuments([]);
+    const docs = [{"id":"doc001", "name":"Beekeeper.jpg" , "documentType":{"id":0,"name":"Sample Documents"}},
+    {"id":"doc002", "name":"Checklist.doc" , "documentType":{"id":0,"name":"Sample Documents"}}
+    ];
+    setDocuments(docs);
     setLoader(false);
   };
 
