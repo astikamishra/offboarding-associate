@@ -63,19 +63,20 @@ const Form = (props) => {
       info.coordinatorName !== "" &&
       info.isIBMNewHire !== ""
     ) {
-      // axios
-      //   .get(
-      //     "http://localhost:9094/onboarding_checklist/get-all-onboarding-checklist",
-      //     { headers: { Authorization: "Bearer " + userToken } }
-      //   )
-      //   .then((result) => {
-      //     props.onInfoSubmit({ info, result: result.data });
-      //   });
+      axios
+        .get(
+          "http://localhost:9094/offboarding_checklist/get-all-offboarding-checklist",
+          { headers: { Authorization: "Bearer " + userToken } }
+        )
+        .then((result) => {
+          props.onInfoSubmit({ info, result: result.data });
+        });
       
-      const data = [
-        {"checkListId":"checklisti1001","questions":"Has the PL/PM sent email to Prudential management informing about the release date and user id termination request before the end date and termination of id confirmed?","status":"","comment":"","link":"","linkName":""}
-        ];
-      props.onInfoSubmit({ info, result: data });
+      // const data = [
+      //   {"checkListId":"checklisti1001","questions":"Has the PL/PM sent email to Prudential management informing about the release date and user id termination request before the end date and termination of id confirmed?","status":"","comment":"","link":"","linkName":""}
+      //   ];
+      // props.onInfoSubmit({ info, result: data });
+      
       setError("");
     } else {
       if (info.employeeName === "")
